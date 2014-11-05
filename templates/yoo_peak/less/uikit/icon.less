@@ -1,0 +1,56 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Icon
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@icon-button-width:                             54px;
+
+@icon-button-background:                        @global-light-background;
+@icon-button-color:                             @global-color;
+
+@icon-button-hover-background:                  @global-transparent-background;
+@icon-button-hover-color:                       @global-color;
+
+@icon-button-active-background:                 @global-transparent-background;
+@icon-button-active-color:                      @global-color;
+
+//
+// New
+//
+
+@icon-button-hover-box-shadow: 			@global-color;
+@icon-button-active-box-shadow:			@global-muted-color;
+
+@icon-button-margin-left:                10px;
+
+
+// Modifier: `uk-icon-button`
+// ========================================================================
+
+.hook-icon-button() {
+	-webkit-transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+	-moz-transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+	transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+// Hover
+.hook-icon-button-hover() { box-shadow: 0 0 0 3px @icon-button-hover-box-shadow; }
+
+// Active
+.hook-icon-button-active() { box-shadow: inset 0 0 0 3px @icon-button-active-box-shadow; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-icon-misc() {
+
+    .uk-icon-button + .uk-icon-button { margin-left: @icon-button-margin-left; }
+
+}

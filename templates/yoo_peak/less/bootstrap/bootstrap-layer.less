@@ -1,0 +1,26 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* ========================================================================
+   Name:            Bootstrap layer
+   Description:     Compatibility layer to match UIkit and Bootstrap style
+ ========================================================================== */
+
+@bs-input-height:           28px;
+@bs-control-input-height:   @bs-input-height;
+@bs-button-height:          22px;
+
+
+/* Label overrides
+ ========================================================================== */
+
+// Reset border-radius
+.label,
+.badge { border-radius: 0; }
+
+
+/* Input overrides
+ ========================================================================== */
+
+.control-group.error input,
+.control-group.warning input,
+.control-group.success input { border: none; }

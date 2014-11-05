@@ -1,0 +1,113 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Navbar
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@navbar-nav-height:                             	50px;
+@navbar-nav-padding-horizontal:                 	15px;
+@navbar-nav-font-size:                          	17px;
+@navbar-nav-subtitle-font-size: 					12px;
+
+@navbar-background:									@global-light-background;
+@navbar-color:                                  	@global-color;
+@navbar-link-color:                             	@global-primary-color;
+@navbar-link-hover-color:                       	@global-link-hover-color;
+@navbar-nav-color: 									@global-color;
+@navbar-nav-hover-background:                   	darken(@global-light-background, 2%);
+@navbar-nav-hover-color:                        	@global-color;
+@navbar-nav-onclick-background:                 	@navbar-nav-hover-background;
+@navbar-nav-onclick-color:                      	@global-color;
+@navbar-nav-active-background:                  	@navbar-nav-hover-background;
+@navbar-nav-active-color:                       	@global-color;
+@navbar-brand-color:                            	@global-color;
+@navbar-brand-hover-color:                      	@global-link-hover-color;
+
+@navbar-toggle-color:                           	@global-color;
+@navbar-toggle-hover-color:                     	@global-link-hover-color;
+
+//
+// New
+//
+
+@navabar-border-radius:								@global-border-radius;
+
+@navbar-toggle-background:							@global-light-background;
+@navbar-toggle-border-radius:						@global-border-radius;
+
+
+// Component
+// ========================================================================
+
+.hook-navbar() { border-radius: @navabar-border-radius @global-border-radius; }
+
+
+// Sub-object: `uk-navbar-nav`
+// ========================================================================
+
+.hook-navbar-nav() {}
+
+// Hover
+.hook-navbar-nav-hover() {}
+
+// OnClick
+.hook-navbar-nav-onclick() {}
+
+// Active
+.hook-navbar-nav-active() {}
+
+
+// Sub-object: `uk-navbar-content`
+// ========================================================================
+
+.hook-navbar-content() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-navbar-misc() {
+
+	// Search in navbar
+	// ========================================================================
+
+	.uk-navbar {
+
+		.uk-search-field {
+			width: @search-height;
+			position: relative;
+	    	z-index: 1;
+	    	padding: 0;
+	    	cursor: pointer;
+	    	background: transparent;
+		}
+
+		.uk-search-close { z-index: 2; }
+
+		.uk-search-field:focus,
+	    .uk-active .uk-search-field {
+	        padding: 0 @search-padding;
+	        cursor: text;
+	    }
+
+	    .uk-search-field:-ms-input-placeholder { color: transparent; }
+	    .uk-search-field::-moz-placeholder { color: transparent; }
+	    .uk-search-field::-webkit-input-placeholder { color: transparent; }
+
+	}
+
+	/*
+	 * Navbar toggle
+	 */
+
+	.uk-navbar-toggle {
+		background: @navbar-toggle-background;
+		border-radius: @navbar-toggle-border-radius;
+	}
+
+}

@@ -1,0 +1,85 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Form
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@form-border:                                   @global-light-background;
+@form-background:                               @global-light-background;
+@form-color:                                    @global-color;
+
+@form-focus-border:                             @global-muted-color;
+@form-focus-background:                         @global-background;
+@form-focus-color:                              @global-color;
+
+@form-disabled-border:                          @global-light-background;
+@form-disabled-background:                      @global-light-background;
+@form-disabled-color:                           @global-muted-color;
+
+@form-placeholder-color:                        @global-color;
+
+@form-legend-border:                            @global-border;
+
+@form-danger-border:                            @global-light-background;
+@form-danger-background:                        #fdebeb;
+@form-danger-color:                             @global-danger-color;
+
+@form-success-border:                           @global-light-background;
+@form-success-background:                       #f2f9de;
+@form-success-color:                            @global-success-color;
+
+@form-blank-border:                             @global-muted-color;
+
+@form-icon-color:                               @global-color;
+
+//
+// New
+//
+
+@form-border-radius:                            @global-border-radius;
+
+
+// Component
+// ========================================================================
+
+.hook-form() { border-radius: @form-border-radius; }
+
+// Focus state
+.hook-form-focus() {}
+
+// Disabled state
+.hook-form-disabled() {}
+
+
+// Validation states
+// ========================================================================
+
+//
+// Error state
+//
+
+.hook-form-danger() {}
+
+//
+// Success state
+//
+
+.hook-form-success() {}
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-form-blank() {}
+.hook-form-blank-focus() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-form-misc() {}

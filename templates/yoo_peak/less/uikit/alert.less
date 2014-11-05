@@ -1,0 +1,85 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Alert
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@alert-margin-vertical:                         @global-margin;
+
+@alert-background:                              @global-primary-background;
+@alert-color:                                   @global-contrast-color;
+
+@alert-success-background:                      @global-success-background;
+@alert-success-color:                           @global-contrast-color;
+
+@alert-warning-background:                      @global-warning-background;
+@alert-warning-color:                           @global-contrast-color;
+
+@alert-danger-background:                       @global-danger-background;
+@alert-danger-color:                            @global-contrast-color;
+
+//
+// New
+//
+
+@alert-border-radius:                           @global-border-radius;
+
+@alert-link:                                    #2a8192;
+@alert-link-hover:                              darken(@alert-link, 30%);
+
+@alert-warning-link:                            #ffdca7;
+@alert-warning-link-hover:                      darken(@alert-warning-link, 50%);
+
+@alert-success-link:                            #94b437;
+@alert-success-link-hover:                      darken(@alert-success-link, 30%);
+
+@alert-danger-link:                            #982a35;
+@alert-danger-link-hover:                      darken(@alert-danger-link, 30%);
+
+
+// Component
+// ========================================================================
+
+.hook-alert() {
+    border-radius: @alert-border-radius;
+    a { color: @alert-link; }
+    a:hover { color: @alert-link-hover; }
+}
+
+
+// Modifier: `uk-alert-success`
+// ========================================================================
+
+.hook-alert-success() {
+    a { color: @alert-success-link; }
+    a:hover { color: @alert-success-link-hover; }
+}
+
+
+// Modifier: `uk-alert-warning`
+// ========================================================================
+
+.hook-alert-warning() {
+    a { color: @alert-warning-link; }
+    a:hover { color: @alert-warning-link-hover; }
+}
+
+
+// Modifier: `uk-alert-danger`
+// ========================================================================
+
+.hook-alert-danger() {
+    a { color: @alert-danger-link; }
+    a:hover { color: @alert-danger-link-hover; }
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-alert-misc() {}

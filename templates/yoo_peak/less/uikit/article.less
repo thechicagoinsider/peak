@@ -1,0 +1,64 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Article
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@article-meta-font-size:                        13px;
+@article-meta-line-height:                      20px;
+@article-meta-color:                            @global-color;
+
+@article-lead-color:                            @global-color;
+@article-lead-font-size:                        16px;
+@article-lead-line-height:                      30px;
+
+@article-divider-border:                        @global-border;
+
+//
+// New
+//
+
+@article-meta-background:                        @global-light-background;
+@article-meta-border-radius:                    @global-large-border-radius;
+@article-divider-width:                            (@global-border-width - 1px);
+
+
+// Sub-object `uk-article-title`
+// ========================================================================
+
+.hook-article-title() { }
+
+
+// Sub-object `uk-article-meta`
+// ========================================================================
+
+.hook-article-meta() {
+    display: inline-block;
+    margin-top: 0;
+    padding: 5px 18px;
+    border-radius: @article-meta-border-radius;
+    background: @article-meta-background;
+}
+
+
+// Sub-object `uk-article-lead`
+// ========================================================================
+
+.hook-article-lead() {}
+
+
+// Sub-object `uk-article-divider`
+// ========================================================================
+
+.hook-article-divider() { border-width: @article-divider-width; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-article-misc() { }

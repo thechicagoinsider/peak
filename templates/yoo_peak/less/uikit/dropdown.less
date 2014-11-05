@@ -1,0 +1,69 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Dropdown
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dropdown-z-index:                              (@global-z-index + 20);
+@dropdown-padding:								30px;
+@dropdown-small-padding: 						10px;
+
+@dropdown-background:                           @global-dropdown-background;
+@dropdown-color:                                @global-dropdown-color;
+
+@dropdown-divider-border-width: 				@global-border-width - 1px;
+@dropdown-divider-border:						@global-dropdown-divider;
+
+@dropdown-navbar-background:                	@global-dropdown-background;
+@dropdown-navbar-color:                     	@global-dropdown-color;
+
+//
+// New
+//
+
+@dropdown-link-color:                           @global-link-color;
+@dropdown-list-link-color:                      @global-dropdown-color;
+@dropdown-list-link-hover-color:                @global-dropdown-hover-color;
+
+// Component
+// ========================================================================
+
+.hook-dropdown() {
+
+    padding: (@dropdown-padding - 10px) @dropdown-padding;
+
+    a { color: @dropdown-link-color; }
+
+    .uk-list a {
+
+        color: @dropdown-list-link-color;
+        &:hover { color: @dropdown-list-link-hover-color; }
+
+    }
+
+
+}
+
+
+// Modifier: `uk-dropdown-navbar`
+// ========================================================================
+
+.hook-dropdown-navbar() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dropdown-misc() {
+
+	// Nav in dropdown
+    // ==========================================================================
+
+    .uk-dropdown .uk-nav { margin: 0; }
+
+}

@@ -1,0 +1,176 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,400,300';
+
+/* theme: Peak - salmon */
+
+//
+// Typography
+//
+
+@global-color:                                    #6f7a80;
+@global-link-color:                               #f56f6c;
+@global-link-hover-color:                         #fff;
+@global-primary-color:                            #f56f6c;
+@global-secondary-color:                          #fff;
+@global-muted-color:                              #7a8288;
+
+//
+// Backgrounds
+//
+
+@global-background:                               #2f3234;
+@global-light-background:                         #2a2d2f;
+@global-primary-background:                       #f56f6c;
+@global-dropdown-background:                      #262b2d;
+@global-dropdown-hover-color:                     @global-primary-color;
+
+//
+// Borders
+//
+
+@global-border:                                   #2b2e30;
+@global-dropdown-divider:                         #333739;
+
+//
+// Base
+//
+
+@base-body-font-family:                           'Open Sans';
+@base-heading-font-family:                        'Open Sans';
+
+//
+// Panel
+//
+
+@panel-box-primary-background:                    #33373a;
+@panel-box-primary-border:                        #3d4245;
+@panel-box-primary-button-border:                 @button-color;
+@panel-box-primary-button-color:                  @button-color;
+@panel-box-primary-button-hover-color:            #2f3234;
+@panel-box-primary-button-primary-color:          #f56f6c;
+@panel-box-primary-button-primary-border:         #f56f6c;
+@panel-box-primary-button-primary-hover-color:    #2f3234;
+@panel-box-primary-button-primary-active-color:   @button-active-color;
+@panel-box-secondary-background:                  #292b2d;
+@panel-box-secondary-border:                      darken(@panel-box-secondary-background, 1%);
+
+//
+// Nav
+//
+
+@nav-border:                                      rgba(0,0,0,0.07);
+@nav-sub-background:                              rgba(0,0,0,0.05);
+@nav-offcanvas-divider-border:                    @nav-border;
+@nav-navbar-divider-border:                       @nav-dropdown-border;
+@nav-search-divider-border:                       @nav-dropdown-border;
+@nav-offcanvas-hover-color:                       @global-dropdown-hover-color;
+@nav-dropdown-nested-hover-color:                 #f56f6c;
+@nav-dropdown-nav-sub-background:                 #25282a;
+
+//
+// Navbar
+//
+
+@navbar-nav-hover-background:                     @global-dropdown-background;
+
+//
+// Subnav
+//
+
+@subnav-line-border:                              @global-muted-color;
+@subnav-pill-hover-color:                         #fff;
+@subnav-pill-active-background:                   @global-light-background;
+@subnav-pill-hover-background:                    @global-light-background;
+@subnav-color:                                    @global-color;
+
+//
+// Pagination
+//
+
+@pagination-link-hover-border:                    #3d4245;
+
+//
+// Tab
+//
+
+@tab-border:                                     #44494d;
+@tab-hover-border:                               @global-light-background;
+@tab-active-border:                              @tab-border;
+@tab-hover-background:                           @global-light-background;
+
+//
+// list
+//
+
+@list-link-color:                                 @global-color;
+
+//
+// Button
+//
+
+@button-color:                                    #f1f6f9;
+@button-border:                                   #f1f6f9;
+@button-hover-color:                              #2f3234;
+@button-active-color:                             lighten(@button-hover-color, 10%);
+@button-primary-hover-color:                      @global-secondary-color;
+@button-primary-active-color:                     #fcbcbb;
+@button-disabled-color:                           darken(@global-color, 10%);
+
+//
+// Icons
+//
+
+@icon-button-background:                        @global-primary-background;
+@icon-button-color:                             @global-contrast-color;
+@icon-button-hover-color:                       @global-primary-color;
+@icon-button-hover-box-shadow:                  @icon-button-hover-color;
+@icon-button-active-color:                      #fff;
+@icon-button-active-box-shadow:                 #fff;
+
+//
+// Alert
+//
+
+@alert-background:                                #55b8e1;
+
+//
+// Thumbnail
+//
+
+@thumbnail-caption-color:                         @global-color;
+
+//
+// Offcanvas
+//
+
+@offcanvas-bar-background:                       #2c2f31;
+@offcanvas-background:                           rgba(0,0,0,0.5);
+
+//
+// Tooltip
+//
+
+@tooltip-background:                             #292b2d;
+
+//
+// Addon search
+//
+
+@search-icon-color:                             #fff;
+@search-color:                                  #fff;
+
+
+// Theme global variables
+// ==========================================================================
+
+@theme_sidebar-vertical-nav-background:         #25282a;
+@theme_sidebar-navbar-nav-hover:                @global-link-color;
+@theme_sidebar-navbar-toggle-icon-color:        darken(@global-color, 10%);
+
+@theme_sidebar-form-background:                 #333739;
+
+@theme_heading-underline-border:                @global-primary-color;
+
+@theme_overlay-background:                      #272c2e;
+@theme_overlay-title:                           #f56f6c;

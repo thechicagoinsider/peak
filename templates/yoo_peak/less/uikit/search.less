@@ -1,0 +1,117 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Search
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@search-width:                                  	260px;
+@search-focus-width:                            	260px;
+
+@search-height:                                 	45px;
+@search-padding:									@search-height;
+@search-background: 								@global-light-background;
+@search-color:                                  	@global-color;
+@search-placeholder-color:                      	transparent;
+
+@search-icon-size:                              	20px;
+@search-icon-color:									@global-muted-color;
+
+@dropdown-search-background:                        @global-dropdown-background;
+@dropdown-search-color:                             @global-dropdown-color;
+
+@nav-search-color:                                  @global-dropdown-color;
+@nav-search-active-background:                      @global-transparent-background;
+@nav-search-active-color:                           @global-dropdown-hover-color;
+@nav-search-header-color:                           @global-secondary-color;
+@nav-search-divider-border:                         @global-dropdown-divider;
+@nav-search-divider-border-width:                   @global-border-width;
+@nav-search-nested-color:                           @global-color;
+@nav-search-nested-hover-color:                     @global-link-hover-color;
+
+@offcanvas-search-background:                       rgba(0,0,0,0.1);
+@offcanvas-search-color:                            @global-color;
+@offcanvas-search-placeholder-color:                @global-color;
+@offcanvas-search-icon-color:                       @offcanvas-search-placeholder-color;
+
+// Dropdown modifier
+@dropdown-search-width:                             300px;
+@dropdown-search-margin-top:                        @global-margin-large;
+
+//
+// New
+//
+
+@search-field-border-radius:                        @global-border-radius;
+
+@nav-search-hover-color:                            @global-dropdown-hover-color;
+
+
+// Component
+// ========================================================================
+
+.hook-search() {}
+
+.hook-search-icon() {}
+
+
+// Sub-object `uk-search-field`
+// ========================================================================
+
+.hook-search-field() { border-radius: @search-field-border-radius; }
+
+.hook-search-field-focus() {}
+
+
+// Modifier: `uk-dropdown-search`
+// ========================================================================
+
+.hook-dropdown-search() {}
+
+
+// Modifier `uk-nav-search`
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-nav-search() {}
+
+// Active
+.hook-nav-search-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-search-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-search-divider() {}
+
+
+// Search in offcanvas
+// ========================================================================
+
+.hook-offcanvas-search-field() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-search-misc() {
+
+    // Modifier: `uk-nav-search`
+    // ========================================================================
+
+    .uk-nav-search > li > a:hover { color: @nav-search-hover-color; }
+
+}

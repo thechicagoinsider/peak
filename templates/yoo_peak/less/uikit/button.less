@@ -1,0 +1,181 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Button
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@button-background:                             @global-transparent-background;
+@button-color:                                  @global-link-color;
+@button-hover-background:                       @button-border;
+@button-hover-color:                            @global-color;
+
+@button-active-background:                      @button-border;
+@button-active-color:                           @global-secondary-color;
+
+@button-primary-background:                     @global-transparent-background;
+@button-primary-color:                          @global-primary-color;
+@button-primary-hover-background:               @global-primary-background;
+@button-primary-active-background:              @button-primary-hover-background;
+@button-primary-active-color:                   #bee5ec;
+
+@button-success-background:                     @global-transparent-background;
+@button-success-color:                          @global-success-color;
+@button-success-hover-background:               @global-success-background;
+@button-success-active-background:              @global-success-background;
+@button-success-active-color:                   #e8f7bd;
+
+@button-danger-background:                      @global-transparent-background;
+@button-danger-color:                           @global-danger-color;
+@button-danger-hover-background:                @global-danger-background;
+@button-danger-active-background:               @global-danger-background;
+@button-danger-active-color:                    #ebadb3;
+
+@button-link-color:                             @global-link-color;
+@button-link-hover-color:                       @global-link-hover-color;
+
+@button-disabled-background:                    @global-light-background;
+@button-disabled-color:                         lighten(@global-color, 25%);
+
+//
+// New
+//
+
+@button-border:                           @global-border;
+@button-primary-border:                   @global-primary-background;
+@button-success-border:                   @global-success-background;
+@button-danger-border:                    @global-danger-background;
+
+@button-border-radius:                          @global-large-border-radius;
+@button-disabled-border:                  @button-disabled-background;
+
+
+// Component
+// ========================================================================
+
+.hook-button() {
+    border: (@global-border-width - 1px) solid @button-border;
+    border-radius: @button-border-radius;
+    box-shadow: inset 0 0 0 0 @button-border;
+}
+
+.hook-button-hover() {
+    box-shadow: inset 0 0 0 20px @button-border;
+    -webkit-transition: box-shadow 0.2s ease-out, background 0.3s linear;
+    -moz-transition: box-shadow 0.2s ease-out, background 0.3s linear;
+    transition: box-shadow 0.2s ease-out, background 0.3s linear;
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+.hook-button-active() {
+    box-shadow: none;
+    -webkit-transition: background-color 0s;
+    -moz-transition: background-color 0s;
+    transition: background-color 0s;
+}
+
+
+// Color modifiers
+// ========================================================================
+
+//
+// Modifier: `uk-button-primary`
+//
+
+.hook-button-primary() {
+    border-color: @button-primary-border;
+    box-shadow: inset 0 0 0 0 @button-primary-border;
+}
+
+.hook-button-primary-hover() { box-shadow: inset 0 0 0 20px @button-primary-border; }
+.hook-button-primary-active() {}
+
+//
+// Modifier: `uk-button-success`
+//
+
+.hook-button-success() {
+    border-color: @button-success-border;
+    box-shadow: inset 0 0 0 0 @button-success-border;
+}
+
+.hook-button-success-hover() { box-shadow: inset 0 0 0 20px @button-success-border; }
+.hook-button-success-active() {}
+
+//
+// Modifier: `uk-button-danger`
+//
+
+.hook-button-danger() {
+    border-color: @button-danger-border;
+    box-shadow: inset 0 0 0 0 @button-danger-border;
+}
+
+.hook-button-danger-hover() { box-shadow: inset 0 0 0 20px @button-danger-border; }
+.hook-button-danger-active() {}
+
+
+// Disabled state
+// ========================================================================
+
+.hook-button-disable() {
+    border-color: @button-disabled-border;
+    box-shadow: none;
+}
+
+
+// Modifier: `uk-button-link`
+// ========================================================================
+
+.hook-button-link() { box-shadow: none; }
+
+
+// Size modifiers
+// ========================================================================
+
+.hook-button-large() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-button-misc() {
+
+    //
+    // Reset border-radius
+    //
+
+    .uk-button-group > .uk-button:not(:first-child):not(:last-child),
+    .uk-button-group > div:not(:first-child):not(:last-child) .uk-button { border-radius: 0; }
+
+    .uk-button-group > .uk-button:first-child,
+    .uk-button-group > div:first-child .uk-button {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .uk-button-group > .uk-button:last-child,
+    .uk-button-group > div:last-child .uk-button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    //
+    // Collapse border
+    //
+
+    .uk-button-group > .uk-button:nth-child(n+2),
+    .uk-button-group > div:nth-child(n+2) .uk-button { border-left-width: 0; }
+
+    //
+    // Button dropdown
+    //
+
+    .uk-button-dropdown .uk-dropdown { border-radius: @global-border-radius; }
+
+}
